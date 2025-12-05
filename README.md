@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <a id="readme-top"></a>
 
 <div align="center">
@@ -271,3 +272,7 @@ Project Link: [https://github.com/abhiishhekk/Complaint_Tracking_System](https:/
 [Mongo-url]: https://www.mongodb.com/
 [TailwindCSS]: https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [TailwindCSS-url]: https://tailwindcss.com/
+=======
+# citizen-urban-solver
+Citizen Urban Solver is a web-based complaint tracking system that allows citizens to report civic issues, while enabling authorities to manage, update, and resolve complaints efficiently.
+>>>>>>> 94a9d629c64a74ac77ca507fdb30bfec91cbba91
