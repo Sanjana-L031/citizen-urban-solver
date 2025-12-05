@@ -254,11 +254,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ---
 
-## Contact
-
-Email: application.controllerroute@gmail.com
-
-Project Link: [https://github.com/abhiishhekk/Complaint_Tracking_System](https://github.com/abhiishhekk/Complaint_Tracking_System)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
