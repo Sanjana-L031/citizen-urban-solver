@@ -252,11 +252,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
----
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Node.js]: https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white
@@ -270,4 +265,4 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 =======
 # citizen-urban-solver
 Citizen Urban Solver is a web-based complaint tracking system that allows citizens to report civic issues, while enabling authorities to manage, update, and resolve complaints efficiently.
->>>>>>> 94a9d629c64a74ac77ca507fdb30bfec91cbba91
+
