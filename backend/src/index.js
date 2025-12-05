@@ -20,3 +20,6 @@ connectDB()
 .catch((err)=>{
     console.log("DB connection error", err);
 })
+
+//console.log("Cloudinary env check:", process.env.CLOUDINARY_NAME);
+

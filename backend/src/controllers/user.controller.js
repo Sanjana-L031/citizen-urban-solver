@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import { asyncHandler } from '../utils/asyncHandler.js';
 import { apiError } from '../utils/apiError.js';
 import { apiResponse } from '../utils/apiResponse.js';
@@ -71,17 +73,21 @@ const registerUser = asyncHandler(async (req, res) => {
         await User.deleteOne({ email: existingUser.email });
     }
 
-    const profilePictureLocalPath = req.files?.profilePicture[0].path;
-    if (!profilePictureLocalPath) {
-        throw new apiError(400, 'Profile picture is required for authenticity');
+    const profilePictureLocalPath = req.files?.profilePicture?.[0]?.path;
+    let optimisedProfilePictureUrl = "";
+    if (profilePictureLocalPath) {
+        const profilePicture = await uploadOnCloudinary(profilePictureLocalPath);
+        if (profilePicture) {
+            optimisedProfilePictureUrl = getOptimizedUrl(profilePicture.url);
+        }
     }
 
-    const profilePicture = await uploadOnCloudinary(profilePictureLocalPath);
+    //const profilePicture = await uploadOnCloudinary(profilePictureLocalPath);
 
-    if (!profilePicture) {
-        throw new apiError(500, 'Error uploading profile picture');
-    }
-    const optimisedProfilePictureUrl = getOptimizedUrl(profilePicture.url)
+    //if (!profilePicture) {
+        //throw new apiError(500, 'Error uploading profile picture');
+    //}
+    //const optimisedProfilePictureUrl = getOptimizedUrl(profilePicture.url)
     const verificationToken = crypto.randomBytes(32).toString("hex");
     const verificationExpiry = Date.now() + 60 * 60 * 1000; // 1 hour
     // console.log(optimisedProfilePictureUrl);
@@ -347,4 +353,31 @@ const editProfile = asyncHandler(async (req, res) => {
         new apiResponse(200, responseUser, "User profile updated successfully")
     );
 });
-export { registerUser, loginUser, logoutUser, userProfile, editProfile };
+
+const verifyEmail = asyncHandler(async (req, res) => {
+    const { token, email } = req.query;
+
+    if (!token || !email) {
+        throw new apiError(400, "Token and email are required for verification.");
+    }
+
+    const user = await User.findOne({ email: email.toLowerCase(), emailVerificationToken: token });
+
+    if (!user) {
+        throw new apiError(400, "Invalid verification link or user does not exist.");
+    }
+
+    if (user.emailVerificationExpiry < Date.now()) {
+        throw new apiError(400, "Verification link has expired.");
+    }
+
+    user.isEmailVerified = true;
+    user.emailVerificationToken = undefined;
+    user.emailVerificationExpiry = undefined;
+
+    await user.save();
+
+    return res.status(200).json(new apiResponse(200, {}, "Email verified successfully."));
+});
+
+export { registerUser, loginUser, logoutUser, userProfile, editProfile, verifyEmail };

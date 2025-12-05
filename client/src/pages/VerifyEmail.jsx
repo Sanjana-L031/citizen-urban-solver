@@ -11,14 +11,13 @@ export default function VerifyEmail() {
   const [verified, setVerified] = useState(false);
     const navigate = useNavigate();
     useEffect(()=>{
-        setTimeout(()=>{
-
-            if(verified === true){
+        if(verified){
+            const timer = setTimeout(()=>{
                 navigate("/login");
-            }
-        }, [4000])
-        
-    }, [verified]);
+            },4000);
+            return () => clearTimeout(timer);
+        } 
+    }, [verified, navigate]);
 //   useEffect(() => {
     
 //     verify();
@@ -29,7 +28,7 @@ export default function VerifyEmail() {
       const email = searchParams.get("email");
 
       if (!token || !email) {
-        setLoading("Invalid verification link.");
+        alert("Invalid verification link.");
         return;
       }
       setVerified(false);
@@ -106,9 +105,9 @@ export default function VerifyEmail() {
         >
             Verify your Email
         </Button>
-      {verified && <Typography variant="button"
+      {verified && <Typography variant="button" color="green"
 
-      >Redirecting to login...</Typography>}
+      >✅Email verified! Redirecting to login...</Typography>}
     </Paper>
   );
 }

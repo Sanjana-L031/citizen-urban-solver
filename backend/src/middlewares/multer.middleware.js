@@ -1,5 +1,10 @@
 import multer from "multer";
+import fs from "fs";
 
+const uploadDir = "./public/temp";
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
 
 //diskupload copy pasted from multer documentation from github
 

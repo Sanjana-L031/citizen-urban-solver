@@ -44,8 +44,7 @@ function Register() {
       if (
         !formData ||
         formData?.fullName.toString().trim() == '' ||
-        formData?.email.toString().trim() === '' ||
-        !profilePicture
+        formData?.email.toString().trim() === ''
       ) {
         setStep1Error(true);
       } else {
@@ -116,8 +115,8 @@ function Register() {
     const isEmptyField = Object.values(formData).some(
       (value) => value.trim() === ''
     );
-    if (isEmptyField || !profilePicture) {
-      setError('All fields, including a profile picture, are required.');
+    if (isEmptyField) {
+      setError('All fields are required.');
       return;
     }
     setError('');
@@ -127,7 +126,9 @@ function Register() {
     for (const key in formData) {
       dataToSubmit.append(key, formData[key]);
     }
-    dataToSubmit.append('profilePicture', profilePicture);
+    if (profilePicture) {
+      dataToSubmit.append('profilePicture', profilePicture);
+    }
 
     try {
       const response = await apiClient.post('/register', dataToSubmit);

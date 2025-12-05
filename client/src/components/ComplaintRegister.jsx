@@ -139,11 +139,20 @@ function ComplaintRegister({ handleClose }) {
       dataToSubmit.append(key, formData[key]);
     }
     dataToSubmit.append('photo', complaintPicture);
+ 
+    const token = localStorage.getItem('accessToken'); 
 
     try {
       const response = await apiClient.post(
         '/complaint/uploadComplaint',
-        dataToSubmit
+        dataToSubmit,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            Authorization: `Bearer ${token}`,
+          },
+          withCredentials: true,
+        }
       );
 
       if (response.status === 201) {
@@ -160,6 +169,10 @@ function ComplaintRegister({ handleClose }) {
       setLoading(false);
     }
   };
+
+  console.log('complaintPicture is', complaintPicture);
+  console.log('type:', typeof complaintPicture);
+
   return (
     <Box
       sx={{

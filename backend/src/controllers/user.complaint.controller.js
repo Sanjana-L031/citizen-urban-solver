@@ -40,7 +40,10 @@ const createUserComplaint = asyncHandler(async (req, res) => {
     );
   }
 
-  const photoLocalPath = req.files?.photo?.[0]?.path;
+  //const photoLocalPath = req.files?.photo?.[0]?.path;
+  const photoLocalPath = req.file?.path;
+
+  console.log("Files received:", req.files); 
   if (!photoLocalPath) {
     throw new apiError(400, 'A photo of the complaint is required.');
   }

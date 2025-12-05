@@ -98,7 +98,7 @@ function Step1Complaint({formData, handleChange, handleFileChange, complaintPict
         >
             <input
                 type='file'
-                name='complaintPicture'
+                name='photo'
                 hidden
                 onChange={handleFileChange}
                 required

@@ -5,7 +5,7 @@ import { ROLES } from '../enum/roles.js';
 import { ROLES_ENUM } from '../enum/roles.js';
 // Defines the valid roles in your system.
 
-const userSchema = new Schema(
+const userSchema = new mongoose.Schema(
   {
     fullName: {
       type: String,
@@ -93,7 +93,7 @@ userSchema.methods.generateAccessToken = function () {
     },
     process.env.ACCESS_TOKEN_SECRET,
     {
-      expiresIn: process.env.ACCESS_TOKEN_EXPIRY,
+      expiresIn: process.env.ACCESS_TOKEN_EXPIRY || '15m',
     }
   );
 };
@@ -105,7 +105,7 @@ userSchema.methods.generateRefreshToken = function () {
     },
     process.env.REFRESH_TOKEN_SECRET,
     {
-      expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
+      expiresIn: process.env.REFRESH_TOKEN_EXPIRY || '7d',
     }
   );
 };

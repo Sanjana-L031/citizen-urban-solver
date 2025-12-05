@@ -11,14 +11,10 @@ import {
 const router = Router();
 router.route('/uploadComplaint').post(
   verifyJWT,
-  upload.fields([
-    {
-      name: 'photo',
-      maxCount: 1,
-    },
-  ]),
+  upload.single('photo'),   // ✅ simpler and matches frontend key
   createUserComplaint
 );
+
 
 router
   .route('/userComplaintDashboard')
