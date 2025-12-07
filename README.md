@@ -1,59 +1,3 @@
-<<<<<<< HEAD
- <a id="readme-top"></a>
-
-<div align="center">
-
-[![Contributors](https://img.shields.io/github/contributors/abhiishhekk/Complaint_Tracking_System.svg?style=for-the-badge)](https://github.com/abhiishhekk/Complaint_Tracking_System/graphs/contributors)&nbsp;[![Forks](https://img.shields.io/github/forks/abhiishhekk/Complaint_Tracking_System.svg?style=for-the-badge)](https://github.com/abhiishhekk/Complaint_Tracking_System/network/members)&nbsp;[![Stargazers](https://img.shields.io/github/stars/abhiishhekk/Complaint_Tracking_System.svg?style=for-the-badge)](https://github.com/abhiishhekk/Complaint_Tracking_System/stargazers)&nbsp;[![Issues](https://img.shields.io/github/issues/abhiishhekk/Complaint_Tracking_System.svg?style=for-the-badge)](https://github.com/abhiishhekk/Complaint_Tracking_System/issues)&nbsp;[![MIT License](https://img.shields.io/github/license/abhiishhekk/Complaint_Tracking_System.svg?style=for-the-badge)](https://github.com/abhiishhekk/Complaint_Tracking_System/blob/main/LICENSE.txt)&nbsp;
-
-</div>
-<br />
-<div align="center">
-  <a href="https://github.com/abhiishhekk/Complaint_Tracking_System">
-    <img src="assets/logo.jpeg" alt="Logo" width="80" height="80">
-  </a>
-
-<h3 align="center">Urban Resolve © 2025</h3>
-  <p align="center">
-    A comprehensive municipal complaint management platform for citizens and municipal authorities.
-
-    <br />
-    <br />
-    <a href="https://urban-resolve-client.onrender.com/" ><strong style="text-decoration: underline; color: #0366d6;">View Demo »</strong></a>
-    <br />
-    <a href="https://github.com/abhiishhekk/Complaint_Tracking_System/issues" style="text-decoration: underline; color: #0366d6;">Report Bug</a>
-    ·
-    <a href="https://github.com/abhiishhekk/Complaint_Tracking_System/issues" style="text-decoration: underline; color: #0366d6;">Request Feature</a>
-  </p>
-</div>
-
-
-<details class="toc">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li><a href="#-screenshots--demo">Screenshots & Demo</a></li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
----
-
 ## About The Project
 
 **Urban Resolve** is a comprehensive digital platform designed to simplify and streamline the process of reporting, managing, and resolving municipal complaints. Citizens can easily raise complaints, attach images or documents, and monitor the progress of their issues in real-time. Municipal officers and administrators have dedicated dashboards to handle, assign, and track complaints efficiently.
@@ -84,7 +28,6 @@
 
 * **Secure & Scalable:** Built with Node.js, Express, MongoDB, and React.js with proper role-based access and JWT authentication.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
@@ -97,9 +40,6 @@ This project is built with a modern, scalable, and robust tech stack.
 * **Authentication:** JSON Web Tokens (JWT)
 * **Media Storage:** Cloudinary
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
 
 ## 📸 Screenshots & Demo
 
@@ -108,13 +48,6 @@ This project is built with a modern, scalable, and robust tech stack.
 ![Project Profile Page](assets/profile.png)
 ![Project Dashboard](assets/dashboard.png)
 
-### Video Demo
-
-[![Urban Resolve Video Demo](https://img.youtube.com/vi/kMk5US-CRag/maxresdefault.jpg)](https://youtu.be/kMk5US-CRag)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
 
 ## Getting Started
 
