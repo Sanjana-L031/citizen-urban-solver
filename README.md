@@ -67,7 +67,7 @@ Ensure you have the following installed on your local development machine:
 
 1.  **Clone the repository**
     ```sh
-    git clone https://github.com/abhiishhekk/Complaint_Tracking_System.git
+    git clone https://github.com/Sanjana-L031/citizen-urban-solver.git
     ```
 
 2.  **Backend Setup**
@@ -141,13 +141,6 @@ After successful startup:
 
 Now you can register as a citizen, staff member or admin, log in, file new complaints, and view complaint analytics by type, region, city, pincode, and monthly trend.
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
 ## Usage
 
 Once running, the application allows users to:
@@ -156,32 +149,6 @@ Once running, the application allows users to:
 3. **Browse & Filter:** Use the dashboard to view existing complaints and filter them by **status** (Pending, In Progress, Resolved, Rejected), **type**, **region**, **city**, or **pincode**.
 4. **View Complaint Analytics:** Admins can see complaint distribution by type, region, resolution status, and monthly trends to monitor municipal performance.
 5. **Generate Monthly Reports:** Admins can export comprehensive reports for the current month, including complaint counts, types, resolution rates, and region-wise summaries.
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-## Contributing
-
-Contributions are what make the open-source community an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion to improve this project, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! ⭐ Thanks!
-
-1.  Fork the Project
-2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4.  Push to the Branch (`git push origin feature/AmazingFeature`)
-5.  Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
